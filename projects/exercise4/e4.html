@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset = "utf-8"/>
+<html>
+	<head>
+		<title>CSS manipulation</title>
+		<link href="myStyle.css"
+			rel="stylesheet"
+			type="text/css"/>
+	</head>
+	<body>	
+		<p id="parag" style="border-style: solid">Lorem Ipsem Lopsum</p>
+		
+		Border (RGB - 0-255):<br>
+		<input type="text" id="borderR" value="red">
+		<input type="text" id="borderG" value="green">
+		<input type="text" id="borderB" value="blue">
+		<input type="text" id="width" value="width">
+		<br>	
+		Background:<br>
+		<input type="text" id="backgR" value="red">
+		<input type="text" id="backgG" value="green">
+		<input type="text" id="backgB" value="blue">
+		<br>
+		<input type="button" id="apply" value="Apply" onclick="apply()">
+		 
+		<script>
+		function apply(){
+			let borderr = document.querySelector("#borderR").value;
+			let borderg = document.querySelector("#borderG").value;
+			let borderb = document.querySelector("#borderB").value;
+			let borderw = document.querySelector("#width").value;
+	
+			let backr = document.querySelector("#backgR").value;
+			let backg = document.querySelector("#backgG").value;
+			let backb = document.querySelector("#backgB").value;
+			
+			let tag = document.querySelector("#parag");
+			tag.style.borderWidth = ""+borderw+"px";
+			tag.style.borderColor = "rgb("+borderr+","+borderg+","+borderb+")";
+			tag.style.backgroundColor = "rgb("+backr+", "+backg+","+backb+")";
+		}
+		</script>
+	</body>
+</html>

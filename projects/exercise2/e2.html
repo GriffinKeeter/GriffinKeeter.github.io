@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset = "utf-8"/>
+<html>
+	<head>
+		<title>Slideshow</title>
+	</head>
+	<body>
+		<div class="imgbox" style="width: 30%; height: 400px;">
+			<img src="pic1.jpg" id="image" style="width: 100%; height: 100%">
+		</div>
+		<input type="button" value="prev" onclick="change(false)">
+		<input type="button" value="next" onclick="change(false)">
+		<script>
+		let num = 0;
+		function change(forward){
+			if(forward==true){
+				num++;
+			}else{
+				num--;
+			}
+			num = ((num%5)+5)%5;
+			let name = "pic"+(num+1)+".jpg";
+			document.querySelector("#image").src = name;
+		}
+		</script>
+		
+	</body>
+</html>

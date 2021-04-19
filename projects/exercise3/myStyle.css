@@ -1,0 +1,43 @@
+
+body
+{
+	padding-left: 25px;
+	padding-right: 25px;
+	background-image: url(pattern.jpg); background-size: 100%;
+}
+
+p
+{
+	font-size: 30px;
+	font-family: "Times New Roman", Times, serif;
+	color: green;
+}
+p.name
+{
+	font-size: 50px;
+}
+p.name:hover {
+	font-family: "Papyrus";
+}
+p.bio
+{
+	width: 80%;
+	color: green;
+	font-size: 20px;
+}
+
+div.imgbox
+{
+	color: orange;
+	width: 30%;
+	height: 400;
+}
+
+a
+{
+	color: green;
+	font-size: 25px;
+}
+a:hover {
+	font-family: "Lucida Handwriting";
+}
