@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<link rel="stylesheet" href="style.css">
+<div id="big">ALL ITEMS ARE ONE DOLLAR</div>
+<form action="customerBackend.php" method="post">
+<?php
+	echo "<table style='width:100%'>";
+	for($x = 0; $x < 6; $x ++){
+    	echo "<tr>";
+    	for($y = 0; $y < 6; $y ++){
+        	$num = (6*$x + $y);
+        	$name = "Basket" . $num;
+            echo "<td><input type='checkbox' name=" . $name . " value=" . $name . ">";
+        	echo "<label for=" . $name . ">" . $name . "</label></td>";
+   		}
+        echo "</tr>";
+    }
+    echo "</table>";
+?>
+<br><br>
+SHIPPING<br>
+<input type="radio" id="ship1" name="shipping" value="Free" checked="checked">
+<label for="ship1">Free 7 day</label><br>
+<input type="radio" id="ship2" name="shipping" value="50.00">
+<label for="ship2">$50.00 over night</label><br>
+<input type="radio" id="ship3" name="shipping" value="5.00">
+<label for="ship3">$5.00 three day</label><br>
+<p id="shippingcheck"></p>
+<br>
+Enter email and password:<br>
+<input type="text" id="email" name="email" value="Email" oninput="em()"><p id="emailCheck"></p><br>
+<input type="text" name="password" value="Password"><p id="passwordCheck"></p><br>
+<br><br>
+
+<input type="submit" id="submit">	
+</form>
+
+
+<input type="reset" value="Reset">
+
+<script src="formChecker.js"></script>
+</body>
+</html>
